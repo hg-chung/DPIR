@@ -1,2 +1,2 @@
 # DPIR
-Differentiable Point-based Inverse Rendering
+**Differentiable Point-based Inverse Rendering**
