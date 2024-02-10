@@ -18,12 +18,13 @@ We present differentiable point-based inverse rendering, DPIR, an analysis-by-sy
 We recommend you to use Conda environment. Install pytorch3d following [INSTALL.md](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md).
 
 ```bash
-conda create -n pytorch3d python=3.9
-conda activate pytorch3d
+conda create -n DPIR python=3.9
+conda activate DPIR
 conda install pytorch=1.13.0 torchvision pytorch-cuda=11.6 -c pytorch -c nvidia
 conda install -c fvcore -c iopath -c conda-forge fvcore iopath
 conda install numpy matplotlib tqdm imageio
 pip install scikit-image matplotlib imageio plotly opencv-python
+conda install pytorch3d -c pytorch3d
 ```
 
 ## Dataset
@@ -38,13 +39,31 @@ You can download dataset from Google Drive([]) and put them in the corresponding
 ## Model
 You can download pre-trained models for each dataset from Google Drive([]) and put them in the corresponding `output/` folder,
 
-## Train
+## Train and Evaluation
 You can train multi-view multi-light dataset(DiLiGenT-MV Dataset) or photometric dataset.
-If you want to train DiLiGenT-MV Dataset,
+
+If you want to train and evaluate DiLiGenT-MV dataset,
 ```bash
-cd 
-python main.py --datadir xxx --dataname hotdog --basedir xxx --data_r 0.012 --splatting_r 0.015
+cd code_diligent
+python main.py --conf confs/buddha.conf --datadir data --dataname buddha --basedir output
+python evaluation.py --conf confs/buddha.conf --datadir data --dataname buddha --basedir output
 ```
-## Evaluation
+If you want to train and evaluate photometric dataset,
+```bash
+cd code_photometric
+python main.py --conf confs/maneki.conf --datadir data --dataname maneki --basedir output
+python evaluation.py --conf confs/maneki.conf --datadir data --dataname maneki --basedir output
+```
 
-
+## Citation
+If you find this work useful in your research, please consider citing: 
+```
+@article{chung2023differentiable,
+  title={Differentiable Point-based Inverse Rendering},
+  author={Chung, Hoon-Gyu and Choi, Seokjun and Baek, Seung-Hwan},
+  journal={arXiv preprint arXiv:2312.02480},
+  year={2023}
+}
+```
+## Acknowledgement
+Part of our code is based on the previous works: [point-radiance](https://github.com/sjtuzq/point-radiance), [PS-NeRF](https://github.com/ywq/psnerf), and [PhySG](https://github.com/Kai-46/PhySG).
