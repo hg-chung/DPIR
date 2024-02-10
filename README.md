@@ -1,6 +1,8 @@
 # DPIR
 **Differentiable Point-based Inverse Rendering**
 
+[Paper](https://arxiv.org/abs/2312.02480) 
+
 Hoon-Gyu Chung, Seokjun Choi, Seung-Hwan Baek
 
 CVPR, 2024
@@ -31,5 +33,18 @@ Multi-view multi-light image dataset was preprocessed following [PS-NeRF](https:
 
 Photometric image dataset was rendered by Blender, which contains 4 objects.
 
-You can download dataset from here
+You can download dataset from Google Drive([]) and put them in the corresponding `data/` folder.
+
+## Model
+You can download pre-trained models for each dataset from Google Drive([]) and put them in the corresponding `output/` folder,
+
+## Train
+You can train multi-view multi-light dataset(DiLiGenT-MV Dataset) or photometric dataset.
+If you want to train DiLiGenT-MV Dataset,
+```bash
+cd 
+python main.py --datadir xxx --dataname hotdog --basedir xxx --data_r 0.012 --splatting_r 0.015
+```
+## Evaluation
+
 
