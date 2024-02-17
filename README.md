@@ -23,7 +23,7 @@ conda activate DPIR
 conda install pytorch=1.13.0 torchvision pytorch-cuda=11.6 -c pytorch -c nvidia
 conda install -c fvcore -c iopath -c conda-forge fvcore iopath
 conda install numpy matplotlib tqdm imageio
-pip install scikit-image matplotlib imageio plotly opencv-python
+pip install scikit-image plotly opencv-python
 conda install pytorch3d -c pytorch3d
 ```
 
