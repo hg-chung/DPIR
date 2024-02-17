@@ -34,7 +34,7 @@ Multi-view multi-light image dataset was preprocessed following [PS-NeRF](https:
 
 Photometric image dataset was rendered by Blender, which contains 4 objects.
 
-You can download dataset from Google Drive([]) and put them in the corresponding `data/` folder.
+You can download dataset from [Google Drive](https://drive.google.com/drive/folders/1mxabFe4BoZozNW6LF_FOT9ZFkgvpJxX6) and put them in the corresponding folder.
 
 ## Model
 You can download pre-trained models for each dataset from Google Drive([]) and put them in the corresponding `output/` folder,
@@ -45,14 +45,14 @@ You can train multi-view multi-light dataset(DiLiGenT-MV Dataset) or photometric
 If you want to train and evaluate DiLiGenT-MV dataset,
 ```bash
 cd code_diligent
-python main.py --conf confs/buddha.conf --datadir data --dataname buddha --basedir output
-python evaluation.py --conf confs/buddha.conf --datadir data --dataname buddha --basedir output
+python main.py --conf confs/buddha.conf --datadir DiLiGenT-MV --dataname buddha --basedir output
+python evaluation.py --conf confs/buddha.conf --datadir DiLiGenT-MV --dataname buddha --basedir output
 ```
 If you want to train and evaluate photometric dataset,
 ```bash
 cd code_photometric
-python main.py --conf confs/maneki.conf --datadir data --dataname maneki --basedir output
-python evaluation.py --conf confs/maneki.conf --datadir data --dataname maneki --basedir output
+python main.py --conf confs/maneki.conf --datadir Photometric --dataname maneki --basedir output
+python evaluation.py --conf confs/maneki.conf --datadir Photometric --dataname maneki --basedir output
 ```
 
 ## Citation
