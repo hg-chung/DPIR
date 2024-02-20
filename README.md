@@ -36,9 +36,6 @@ Photometric image dataset was rendered by Blender, which contains 4 objects.
 
 You can download dataset from [Google Drive](https://drive.google.com/drive/folders/1mxabFe4BoZozNW6LF_FOT9ZFkgvpJxX6) and put them in the corresponding folder.
 
-## Model
-You can download pre-trained models for each dataset from Google Drive([]) and put them in the corresponding `output/` folder,
-
 ## Train and Evaluation
 You can train multi-view multi-light dataset(DiLiGenT-MV Dataset) or photometric dataset.
 
