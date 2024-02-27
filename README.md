@@ -53,7 +53,10 @@ python evaluation.py --conf confs/maneki.conf --datadir Photometric --dataname m
 ```
 
 ## Result
-You can train multi-view multi-light dataset(DiLiGenT-MV Dataset) or photometric dataset.
+<p align="center">
+    <img src='docs/result.png' width="800">
+</p>
+
 
 
 
