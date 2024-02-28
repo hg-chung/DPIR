@@ -1,74 +1,47 @@
-# DPIR
-**Differentiable Point-based Inverse Rendering**
+# Academic Project Page Template
+This is an academic paper project page template.
 
-[Paper](https://arxiv.org/abs/2312.02480) 
 
-Hoon-Gyu Chung, Seokjun Choi, Seung-Hwan Baek
-
-CVPR, 2024
-
-## Abstract
-We present differentiable point-based inverse rendering, DPIR, an analysis-by-synthesis method that processes images captured under diverse illuminations to estimate shape and spatially-varying BRDF. To this end, we adopt point-based rendering, eliminating the need for multiple samplings per ray, typical of volumetric rendering, thus significantly enhancing the speed of inverse rendering. To realize this idea, we devise a hybrid point-volumetric representation for geometry and a regularized basis-BRDF representation for reflectance. The hybrid geometric representation enables fast rendering through point-based splatting while retaining the geometric details and stability inherent to SDF-based representations. The regularized basis-BRDF mitigates the ill-posedness of inverse rendering stemming from limited light-view angular samples. We also propose an efficient shadow detection method using point-based shadow map rendering. Our extensive evaluations demonstrate that DPIR outperforms prior works in terms of reconstruction accuracy, computational efficiency, and memory footprint. Furthermore, our explicit point-based representation and rendering enables intuitive geometry and reflectance editing. The code will be publicly available.
-
-<p align="center">
-    <img src='docs/intro.png' width="800">
-</p>
-
-## Installation
-We recommend you to use Conda environment. Install pytorch3d following [INSTALL.md](https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md).
-
-```bash
-conda create -n DPIR python=3.9
-conda activate DPIR
-conda install pytorch=1.13.0 torchvision pytorch-cuda=11.6 -c pytorch -c nvidia
-conda install -c fvcore -c iopath -c conda-forge fvcore iopath
-conda install numpy matplotlib tqdm imageio
-pip install scikit-image plotly opencv-python pyhocon open3d lpips kornia icecream
-conda install pytorch3d -c pytorch3d
-```
-
-## Dataset
-We utilized multi-view multi-light image dataset([DiLiGenT-MV Dataset](https://sites.google.com/site/photometricstereodata/mv?authuser=0)) and photometric image dataset.
-
-Multi-view multi-light image dataset was preprocessed following [PS-NeRF](https://github.com/ywq/psnerf), which contains 5 objects.
-
-Photometric image dataset was rendered by Blender, which contains 4 objects.
-
-You can download dataset from [Google Drive](https://drive.google.com/drive/folders/1mxabFe4BoZozNW6LF_FOT9ZFkgvpJxX6) and put them in the corresponding folder.
-
-## Train and Evaluation
-You can train multi-view multi-light dataset(DiLiGenT-MV Dataset) or photometric dataset.
-
-If you want to train and evaluate DiLiGenT-MV dataset,
-```bash
-cd code_diligent
-python main.py --conf confs/buddha.conf --datadir DiLiGenT-MV --dataname buddha --basedir output
-python evaluation.py --conf confs/buddha.conf --datadir DiLiGenT-MV --dataname buddha --basedir output
-```
-If you want to train and evaluate photometric dataset,
-```bash
-cd code_photometric
-python main.py --conf confs/maneki.conf --datadir Photometric --dataname maneki --basedir output
-python evaluation.py --conf confs/maneki.conf --datadir Photometric --dataname maneki --basedir output
-```
-
-## Result
-<p align="center">
-    <img src='docs/result.png' width="800">
-</p>
+Example project pages built using this template are:
+- https://vision.huji.ac.il/spectral_detuning/
+- https://dreamix-video-editing.github.io
+- https://www.vision.huji.ac.il/conffusion/
+- https://www.vision.huji.ac.il/3d_ads/
+- https://www.vision.huji.ac.il/ssrl_ad/
+- https://www.vision.huji.ac.il/deepsim/
 
 
 
+## Start using the template
+To start using the template click on `Use this Template`.
 
-## Citation
-If you find this work useful in your research, please consider citing: 
-```
-@article{chung2023differentiable,
-  title={Differentiable Point-based Inverse Rendering},
-  author={Chung, Hoon-Gyu and Choi, Seokjun and Baek, Seung-Hwan},
-  journal={arXiv preprint arXiv:2312.02480},
-  year={2023}
-}
-```
-## Acknowledgement
-Part of our code is based on the previous works: [point-radiance](https://github.com/sjtuzq/point-radiance), [PS-NeRF](https://github.com/ywq/psnerf), and [PhySG](https://github.com/Kai-46/PhySG).
+The template uses html for controlling the content and css for controlling the style. 
+To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+
+**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
+
+## Components
+- Teaser video
+- Images Carousel
+- Youtube embedding
+- Video Carousel
+- PDF Poster
+- Bibtex citation
+
+## Tips:
+- The `index.html` file contains comments instructing you what to replace, you should follow these comments.
+- The `meta` tags in the `index.html` file are used to provide metadata about your paper 
+(e.g. helping search engine index the website, showing a preview image when sharing the website, etc.)
+- The resolution of images and videos can usually be around 1920-2048, there rarely a need for better resolution that take longer to load. 
+- All the images and videos you use should be compressed to allow for fast loading of the website (and thus better indexing by search engines). For images, you can use [TinyPNG](https://tinypng.com), for videos you can need to find the tradeoff between size and quality.
+- When using large video files (larger than 10MB), it's better to use youtube for hosting the video as serving the video from the website can take time.
+- Using a tracker can help you analyze the traffic and see where users came from. [statcounter](https://statcounter.com) is a free, easy to use tracker that takes under 5 minutes to set up. 
+- This project page can also be made into a github pages website.
+- Replace the favicon to one of your choosing (the default one is of the Hebrew University). 
+- Suggestions, improvements and comments are welcome, simply open an issue or contact me. You can find my contact information at [https://pages.cs.huji.ac.il/eliahu-horwitz/](https://pages.cs.huji.ac.il/eliahu-horwitz/)
+
+## Acknowledgments
+Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
+
+## Website License
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
