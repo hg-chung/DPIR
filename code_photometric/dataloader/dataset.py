@@ -102,7 +102,7 @@ class Data():
     def genpc(self):
         [H, W, focal] = self.hwf
         K = torch.tensor(self.K).cuda()
-        train_n = 200
+        train_n = self.images.shape[0]
         poses = torch.tensor(self.poses).cuda()[:train_n]
         images = torch.tensor(self.masks)[:train_n] 
         images= torch.cat([images]*3,dim=-1)
