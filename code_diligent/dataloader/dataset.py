@@ -81,7 +81,7 @@ class Data():
         self.dataname = args.dataname
         self.datadir = os.path.join(args.datadir,args.dataname)
         self.logpath = safe_path(args.basedir)
-        images, masks, poses, light_dir, light_int, hwf, K, i_split, avg_imgs, avg_poses = load_diligent_data(self.datadir)     
+        images, masks, poses, light_dir, light_int, hwf, K, i_split, mask_imgs, mask_poses = load_diligent_data(self.datadir)     
            
         self.i_split = i_split
         self.images = images
@@ -89,8 +89,8 @@ class Data():
         self.poses = poses
         self.light_direction = light_dir
         self.light_intensity = light_int
-        self.avg_imgs = avg_imgs
-        self.avg_poses = avg_poses
+        self.mask_imgs = mask_imgs
+        self.mask_poses = mask_poses
         H, W, focal = hwf
         H, W = int(H), int(W)
         hwf = [H, W, focal]   
@@ -102,9 +102,9 @@ class Data():
         
         [H, W, focal] = self.hwf
         K = torch.tensor(self.K)
-        train_n = self.avg_imgs.shape[0]
-        poses = torch.tensor(self.avg_poses)[:train_n]
-        images = torch.tensor(self.avg_imgs)[:train_n] 
+        train_n = self.mask_imgs.shape[0]
+        poses = torch.tensor(self.mask_poses)[:train_n]
+        images = torch.tensor(self.mask_imgs)[:train_n] 
         images= torch.cat([images]*3,dim=-1)
         print("image shape",images.shape)
         
