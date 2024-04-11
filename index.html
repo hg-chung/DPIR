@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({            
+          tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}            
+      });
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+  
   <meta charset="utf-8">
   <meta name="description"
         content="Differentialbe Point-based Inverse Rendering">
@@ -190,15 +197,12 @@
     </div>
     <!--/ Paper video. -->
   </div>
-</section>-->
+</section>
 
 
 <section class="section">
   <div class="container is-max-desktop">
-
     <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
       <div class="column is-full-width">
         <div class="content">
           <h2 class="title is-3">Differentiable Forward Rendering in DPIR</h2>
@@ -215,23 +219,20 @@
           </p>
         </div>
       </div>
-      <!--/ Visual Effects. -->
       </div>
     </div>
-    <!--/ Matting. -->
-
+</section>
+  
+<section class="section hero is-light">
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
+        <h2 class="title is-3">Regualrized basis BRDF</h2>
         <!-- Interpolating. -->
         <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
           <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
+            We utilize regularized basis BRDF representation to estimate accurate spatially-varying BRDFs from limited light-view angular samples. We visualize the BRDFs on unit spheres illuminated
           </p>
         </div>
         <div class="columns is-vcentered interpolation-panel">
