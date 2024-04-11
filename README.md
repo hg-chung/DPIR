@@ -2,7 +2,7 @@
 
 This is the repository that contains source code for the [DPIR website](https://hg-chung.github.io/DPIR/).
 
-If you find Nerfies useful for your work please cite:
+If you find DPIR useful for your work please cite:
 ```
 @article{chung2023differentiable,
   title={Differentiable Point-based Inverse Rendering},
