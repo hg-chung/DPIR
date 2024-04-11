@@ -206,11 +206,11 @@
       <div class="column is-full-width">
         <div class="content">
           <h2 class="title is-3">Differentiable Forward Rendering in DPIR</h2>
-          <div class="content has-text-justified">
           <img src="./static/images/pipeline.jpg"
                  class="interpolation-image"
                  alt="Pipeline"
                  width="100%"/>
+          <div class="content has-text-justified">
           <p>
             (a) For each 3D point, its position is used as a query for the diffuse-albedo MLP $\Theta_d$, SDF MLP $\Theta_\text{SDF}$, and specular-basis coefficient MLP $\Theta_c$. 
             The specular-basis BRDF MLP $\Theta_s$ models specular-basis reflectance, given the incident and outgoing directions $\boldsymbol{\omega_{i}}$ and $\boldsymbol{\omega_{o}}$. 
@@ -231,11 +231,11 @@
       <div class="column is-full-width">
         <div class="content">
           <h2 class="title is-3">Regualrized basis BRDF</h2>
-          <div class="content has-text-justified">
           <img src="./static/images/basis_coeff.jpg"
                  class="interpolation-image"
                  alt="Pipeline"
                  width="60%"/>
+          <div class="content has-text-justified">
           <p>
             We utilize regularized basis BRDF representation to estimate accurate spatially-varying BRDFs from limited light-view angular samples. 
             We visualize the BRDFs on unit spheres illuminated by a point light source. 
@@ -254,11 +254,11 @@
       <div class="column is-full-width">
         <div class="content">
           <h2 class="title is-3">Point-based Visibility Test</h2>
-          <div class="content has-text-justified">
           <img src="./static/images/shadow_handling.jpg"
                  class="interpolation-image"
                  alt="Pipeline"
-                 width="60%"/>
+                 width="50%"/>
+          <div class="content has-text-justified">
           <p>
             (a) For each 3D point, its position is used as a query for the diffuse-albedo MLP $\Theta_d$, SDF MLP $\Theta_\text{SDF}$, and specular-basis coefficient MLP $\Theta_c$. 
             The specular-basis BRDF MLP $\Theta_s$ models specular-basis reflectance, given the incident and outgoing directions $\boldsymbol{\omega_{i}}$ and $\boldsymbol{\omega_{o}}$. 
