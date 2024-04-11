@@ -161,12 +161,7 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <img src="./static/images/intro.PNG"
-                 class="interpolation-image"
-                 alt="Pipeline."
-                 width="100%"/>
-          
+        <h2 class="title is-3">Abstract</h2>          
         <div class="content has-text-justified">
           <p>
             We present differentiable point-based inverse rendering, DPIR, an analysis-by-synthesis method that processes images captured under diverse illuminations to estimate shape and spatially-varying BRDF. 
@@ -207,6 +202,10 @@
       <div class="column is-full-width">
         <div class="content">
           <h2 class="title is-3">Method</h2>
+          <img src="./static/images/intro.PNG"
+                 class="interpolation-image"
+                 alt="Pipeline."
+                 width="100%"/>
           <p>
             <strong>Overview of differentiable forward rendering.</strong> 
             (a) For each 3D point, its position is used as a query for the diffuse-albedo MLP $\Theta_d$, SDF MLP $\Theta_\text{SDF}$, and specular-basis coefficient MLP $\Theta_c$. 
@@ -215,10 +214,6 @@
             By using the diffuse albedo, normals, specular reflectance, and visibility, we compute the radiance for each point. 
             (b) The radiance is then projected onto a camera plane to render the pixel color through splatting-based differentiable forward rendering.
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
         </div>
       </div>
       <!--/ Visual Effects. -->
