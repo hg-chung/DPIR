@@ -199,12 +199,16 @@
     <div class="columns is-centered">
 
       <!-- Visual Effects. -->
-      <div class="column">
+      <div class="column is-full-width">
         <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
+          <h2 class="title is-3">Method</h2>
           <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+            <strong>Overview of differentiable forward rendering.</strong> 
+            (a) For each 3D point, its position is used as a query for the diffuse-albedo MLP $\Theta_d$, SDF MLP $\Theta_\text{SDF}$, and specular-basis coefficient MLP $\Theta_c$. 
+            The specular-basis BRDF MLP $\Theta_s$ models specular-basis reflectance, given the incident and outgoing directions $\boldsymbol{\omega_{i}}$ and $\boldsymbol{\omega_{o}}$. 
+            The point-based shadow renderer estimates the point visibility from a light source per each image. 
+            By using the diffuse albedo, normals, specular reflectance, and visibility, we compute the radiance for each point. 
+            (b) The radiance is then projected onto a camera plane to render the pixel color through splatting-based differentiable forward rendering.
           </p>
           <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/dollyzoom-stacked.mp4"
@@ -213,23 +217,6 @@
         </div>
       </div>
       <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
       </div>
     </div>
     <!--/ Matting. -->
@@ -338,7 +325,6 @@
   author={Chung, Hoon-Gyu and Choi, Seokjun and Baek, Seung-Hwan},
   journal={arXiv preprint arXiv:2312.02480},
   year={2023}
-}
 }</code></pre>
   </div>
 </section>
