@@ -206,9 +206,55 @@
       <div class="column is-full-width">
         <div class="content">
           <h2 class="title is-3">Differentiable Forward Rendering in DPIR</h2>
-          <img src="./static/images/intro.png"
+          <img src="./static/images/intro.jpg'
                  class="interpolation-image"
-                 alt="Pipeline."
+                 alt="Pipeline"
+                 width="100%"/>
+          <p>
+            (a) For each 3D point, its position is used as a query for the diffuse-albedo MLP $\Theta_d$, SDF MLP $\Theta_\text{SDF}$, and specular-basis coefficient MLP $\Theta_c$. 
+            The specular-basis BRDF MLP $\Theta_s$ models specular-basis reflectance, given the incident and outgoing directions $\boldsymbol{\omega_{i}}$ and $\boldsymbol{\omega_{o}}$. 
+            The point-based shadow renderer estimates the point visibility from a light source per each image. 
+            By using the diffuse albedo, normals, specular reflectance, and visibility, we compute the radiance for each point. 
+            (b) The radiance is then projected onto a camera plane to render the pixel color through splatting-based differentiable forward rendering.
+          </p>
+        </div>
+      </div>
+      </div>
+    </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content">
+          <h2 class="title is-3">Regualrized basis BRDF</h2>
+          <img src="./static/images/basis_coeff.jpg"
+                 class="interpolation-image"
+                 alt="Pipeline"
+                 width="100%"/>
+          <p>
+            (a) For each 3D point, its position is used as a query for the diffuse-albedo MLP $\Theta_d$, SDF MLP $\Theta_\text{SDF}$, and specular-basis coefficient MLP $\Theta_c$. 
+            The specular-basis BRDF MLP $\Theta_s$ models specular-basis reflectance, given the incident and outgoing directions $\boldsymbol{\omega_{i}}$ and $\boldsymbol{\omega_{o}}$. 
+            The point-based shadow renderer estimates the point visibility from a light source per each image. 
+            By using the diffuse albedo, normals, specular reflectance, and visibility, we compute the radiance for each point. 
+            (b) The radiance is then projected onto a camera plane to render the pixel color through splatting-based differentiable forward rendering.
+          </p>
+        </div>
+      </div>
+      </div>
+    </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content">
+          <h2 class="title is-3">Regualrized basis BRDF</h2>
+          <img src="./static/images/basis_coeff.jpg"
+                 class="interpolation-image"
+                 alt="Pipeline"
                  width="100%"/>
           <p>
             (a) For each 3D point, its position is used as a query for the diffuse-albedo MLP $\Theta_d$, SDF MLP $\Theta_\text{SDF}$, and specular-basis coefficient MLP $\Theta_c$. 
@@ -224,16 +270,19 @@
 </section>
   
 <section class="section hero is-light">
-    <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Regualrized basis BRDF</h2>
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
           <p>
-            We utilize regularized basis BRDF representation to estimate accurate spatially-varying BRDFs from limited light-view angular samples. We visualize the BRDFs on unit spheres illuminated
+            We utilize regularized basis BRDF representation to estimate accurate spatially-varying BRDFs from limited light-view angular samples. 
+            We visualize the BRDFs on unit spheres illuminated by a point light source. 
+            (a) shows spatially-varying BRDFs of "Cow" with diverse appearance. (b) shows specular basis BRDFs and corresponding specular coefficients.
           </p>
+          <img src="./static/images/intro.png"
+                 class="interpolation-image"
+                 alt="Pipeline"
+                 width="100%"/>
         </div>
         <div class="columns is-vcentered interpolation-panel">
           <div class="column is-3 has-text-centered">
