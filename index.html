@@ -257,7 +257,7 @@
           <img src="./static/images/shadow_handling.jpg"
                  class="interpolation-image"
                  alt="Pipeline"
-                 width="50%"/>
+                 width="60%"/>
           <div class="content has-text-justified">
           <p>
             (a) For each 3D point, its position is used as a query for the diffuse-albedo MLP $\Theta_d$, SDF MLP $\Theta_\text{SDF}$, and specular-basis coefficient MLP $\Theta_c$. 
@@ -274,64 +274,48 @@
 </section>
   
 <section class="section hero is-light">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Point-based Visibility Test</h2>
-          <p>
-            We utilize regularized basis BRDF representation to estimate accurate spatially-varying BRDFs from limited light-view angular samples. 
-            We visualize the BRDFs on unit spheres illuminated by a point light source. 
-            (a) shows spatially-varying BRDFs of "Cow" with diverse appearance. (b) shows specular basis BRDFs and corresponding specular coefficients.
-          </p>
-          <img src="./static/images/intro.png"
-                 class="interpolation-image"
-                 alt="Pipeline"
-                 width="100%"/>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/reflectance_change.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Material editing of diffuse and specular basis BRDF 
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/geometry removal.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Geometry editing with point removal
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/object_merging.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+         Object merging with different objects
+       </h2>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/Environment_relighting1.jpg" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+        Environment map relighting with various objects
+      </h2>
+    </div>
+    <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/Environment_relighting2.jpg" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+        Environment map relighting with various objects
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section>
 
       </div>
     </div>
