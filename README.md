@@ -1,6 +1,6 @@
-# Nerfies
+# Differentialbe Point-based Inverse Rendering
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This is the repository that contains source code for the [DPIR website](https://hg-chung.github.io/DPIR/).
 
 If you find Nerfies useful for your work please cite:
 ```
