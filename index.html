@@ -201,13 +201,12 @@
       <!-- Visual Effects. -->
       <div class="column is-full-width">
         <div class="content">
-          <h2 class="title is-3">Method</h2>
+          <h2 class="title is-3">Differentiable Forward Rendering in DPIR</h2>
           <img src="./static/images/intro.PNG"
                  class="interpolation-image"
                  alt="Pipeline."
                  width="100%"/>
           <p>
-            <strong>Overview of differentiable forward rendering.</strong> 
             (a) For each 3D point, its position is used as a query for the diffuse-albedo MLP $\Theta_d$, SDF MLP $\Theta_\text{SDF}$, and specular-basis coefficient MLP $\Theta_c$. 
             The specular-basis BRDF MLP $\Theta_s$ models specular-basis reflectance, given the incident and outgoing directions $\boldsymbol{\omega_{i}}$ and $\boldsymbol{\omega_{o}}$. 
             The point-based shadow renderer estimates the point visibility from a light source per each image. 
