@@ -275,9 +275,9 @@
   
 <section class="section hero is-light">
       <div class="hero-body">
-         <div class="content">
-            <h2 class="title is-3">Applications</h2>
+        <div class="columns is-centered has-text-centered">
             <div class="container">
+              <h2 class="title is-3">Applications</h2>
               <div id="results-carousel" class="carousel results-carousel">
                <div class="item">
                 <!-- Your image here -->
@@ -315,8 +315,27 @@
                 </h2>
                </div>
             </div>
-       </div>
+          </div>
       </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <div class="content">
+          <h2 class="title is-3">Relighting results of Photometric Dataset</h2>
+          <video id="teaser" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/nvs_relighting.mp4"
+                    type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            <span class="dnerf"></span> Novel view synthesis and relighting with colocated flash light
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="section" id="BibTeX">
