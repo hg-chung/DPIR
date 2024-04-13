@@ -1,7 +1,7 @@
 # DPIR
 **Differentiable Point-based Inverse Rendering**
 
-[Paper](https://arxiv.org/abs/2312.02480) 
+[Project](https://hg-chung.github.io/DPIR/) [Paper](https://arxiv.org/abs/2312.02480)
 
 Hoon-Gyu Chung, Seokjun Choi, Seung-Hwan Baek
 
