@@ -4,11 +4,11 @@ This is the repository that contains source code for the [DPIR website](https://
 
 If you find DPIR useful for your work please cite:
 ```
-@article{chung2023differentiable,
+@inproceedings{chung2023differentiable,
   title={Differentiable Point-based Inverse Rendering},
   author={Chung, Hoon-Gyu and Choi, Seokjun and Baek, Seung-Hwan},
-  journal={arXiv preprint arXiv:2312.02480},
-  year={2023}
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2024}
 }
 ```
 
