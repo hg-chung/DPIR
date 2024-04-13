@@ -39,7 +39,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <!--/ Abstract.  <link rel="icon" href="./static/images/favicon.svg">-->
+  <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -76,7 +76,8 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Differentiable Point-based Inverse Rendering</h1>
+          <h1 style='letter-spacing:-0.02em' class="title is-1 publication-title">Differentiable Point-based Inverse Rendering
+            </h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://sites.google.com/view/hoongyu-chung/home">Hoon-Gyu Chung</a>,</span>
@@ -150,10 +151,10 @@
 </section>
 
 <section class="hero teaser">
-  <div class="container is-max-desktop">
+  <div class="columns is-centered has-text-centered">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/nvs_relighting_photo_white.mp4"
+      <video id="teaser" autoplay muted loop playsinline width="1000" height="100%">
+        <source src="./static/videos/nvs_relighting_maneki.mp4"
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
@@ -195,7 +196,7 @@
         </div>
       </div>
     </div>
-    <!--/ Paper video. -->
+  / Paper video. -->
   </div>
 </section>
 
@@ -225,7 +226,7 @@
     </div>
 </section>
 
-<section class="section hero is-light">
+<!--<section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
@@ -246,8 +247,8 @@
       </div>
       </div>
     </div>
-</section>
-
+</section>-->
+<!--
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -271,14 +272,138 @@
       </div>
       </div>
     </div>
-</section>
-  
+</section> -->
+
 <section class="section hero is-light">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <div class="container">
+        <h2 class="title has-text-centered">Novel View Synthesis of Multi-view Multi-light Dataset</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+              <video id="teaser" autoplay muted loop playsinline height="100%">
+                <source src="./static/videos/nvs_buddha_1.mp4"
+                        type="video/mp4">
+              </video>
+             </div>
+             <div class="item">
+              <video id="teaser" autoplay muted loop playsinline height="100%">
+                <source src="./static/videos/nvs_reading_1.mp4"
+                        type="video/mp4">
+              </video>
+             </div>
+             <div class="item">
+              <video id="teaser" autoplay muted loop playsinline height="100%">
+                <source src="./static/videos/nvs_pot2_1.mp4"
+                        type="video/mp4">
+              </video>
+             </div>
+             <div class="item">
+              <video id="teaser" autoplay muted loop playsinline height="100%">
+                <source src="./static/videos/nvs_cow_1.mp4"
+                        type="video/mp4">
+              </video>
+             </div>
+             <div class="item">
+              <video id="teaser" autoplay muted loop playsinline height="100%">
+                <source src="./static/videos/nvs_bear_1.mp4"
+                        type="video/mp4">
+              </video>
+             </div>
+            </div>
+            </div>
+          </div>
+      </div>
+</div>  
+</section>
+
+<section class="section hero">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <div class="container">
+          <h2 class="title is-3">Relighting of Multi-view Multi-light Dataset</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+              <video id="teaser" autoplay muted loop playsinline height="100%">
+                <source src="./static/videos/nvs_relighting_horse.mp4"
+                        type="video/mp4">
+              </video>
+             </div>
+             <div class="item">
+              <video id="teaser" autoplay muted loop playsinline height="100%">
+                <source src="./static/videos/nvs_relighting_dragon.mp4"
+                        type="video/mp4">
+              </video>
+             </div>
+             <div class="item">
+              <video id="teaser" autoplay muted loop playsinline height="100%">
+                <source src="./static/videos/nvs_relighting_head.mp4"
+                        type="video/mp4">
+              </video>
+             </div>
+             <div class="item">
+              <video id="teaser" autoplay muted loop playsinline height="100%">
+                <source src="./static/videos/nvs_relighting_maneki.mp4"
+                        type="video/mp4">
+              </video>
+             </div>
+             <div class="item">
+              <video id="teaser" autoplay muted loop playsinline height="100%">
+                <source src="./static/videos/nvs_relighting_maneki.mp4"
+                        type="video/mp4">
+              </video>
+             </div>
+        </div>
+      </div>
+</div>  
+</section>
+
+<section class="section hero is-light">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <div class="container">
+          <h2 class="title is-3">Reconstruction Result of Photometric Dataset</h2>
+          <div id="carousel" class="carousel results-carousel">
+            <div class="item">
+              <video id="teaser" autoplay muted loop playsinline height="100%">
+                <source src="./static/videos/nvs_relighting_horse.mp4"
+                        type="video/mp4">
+              </video>
+              
+             </div>
+             <div class="item">
+              <video id="teaser" autoplay muted loop playsinline height="100%">
+                <source src="./static/videos/nvs_relighting_dragon.mp4"
+                        type="video/mp4">
+              </video>
+              
+             </div>
+             <div class="item">
+              <video id="teaser" autoplay muted loop playsinline height="100%">
+                <source src="./static/videos/nvs_relighting_head.mp4"
+                        type="video/mp4">
+              </video>
+              
+             </div>
+             <div class="item">
+              <video id="teaser" autoplay muted loop playsinline height="100%">
+                <source src="./static/videos/nvs_relighting_maneki.mp4"
+                        type="video/mp4">
+              </video>
+              
+             </div>
+        </div>
+      </div>
+</div>  
+</section>
+
+
+<section class="section hero">
       <div class="hero-body">
         <div class="columns is-centered has-text-centered">
             <div class="container">
               <h2 class="title is-3">Applications</h2>
-              <div id="results-carousel" class="carousel results-carousel">
+              <div id="carousel" class="carousel2 results-carousel">
                <div class="item">
                 <!-- Your image here -->
                 <img src="static/images/reflectance_change.jpg" alt="MY ALT TEXT"/>
@@ -302,7 +427,7 @@
                </div>
                <div class="item">
               <!-- Your image here -->
-                <img src="static/images/envmap_relighting.jpg" alt="MY ALT TEXT"/>
+                <img src="static/images/envmap_relighting0.jpg" alt="MY ALT TEXT"/>
                 <h2 class="subtitle has-text-centered">
                 Environment map relighting
                 </h2>
@@ -312,7 +437,7 @@
       </div>
 </section>
 
-<section class="section">
+<!--<section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
@@ -334,7 +459,7 @@
     </div>
   </div>
 </div>
-</section>
+</section>-->
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">

@@ -112,9 +112,14 @@ body {
 
 .results-carousel {
   overflow: hidden;
+  width: 100%;
+  display: block;
+  justify-content: center;
+  position: relative;
 }
 
 .results-carousel .item {
+  flex: 0 0 100%;
   margin: 5px;
   overflow: hidden;
   border: 1px solid #bbb;
@@ -123,8 +128,11 @@ body {
   font-size: 0;
 }
 
-.results-carousel video {
+.results-carousel .video {
   margin: 0;
+}
+.results-carousel .item.active {
+  display: block; /* 활성 아이템만 표시 */
 }
 
 
