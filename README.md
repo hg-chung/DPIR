@@ -1,10 +1,14 @@
-# Differentiable Point-based Inverse Rendering
+# Differentiable Point-based Inverse Rendering (CVPR 2024)
 
-## [Project](https://hg-chung.github.io/DPIR/) | [Paper](https://arxiv.org/abs/2312.02480)
+### [Project](https://hg-chung.github.io/DPIR/) | [Paper](https://arxiv.org/abs/2312.02480)
+
+This repository contains the implementation of the paper:
+
+**Differentiable Point-based Inverse Rendering**
 
 Hoon-Gyu Chung, Seokjun Choi, Seung-Hwan Baek
 
-#### CVPR, 2024
+***CVPR, 2024***
 
 ## Abstract
 We present differentiable point-based inverse rendering, DPIR, an analysis-by-synthesis method that processes images captured under diverse illuminations to estimate shape and spatially-varying BRDF. To this end, we adopt point-based rendering, eliminating the need for multiple samplings per ray, typical of volumetric rendering, thus significantly enhancing the speed of inverse rendering. To realize this idea, we devise a hybrid point-volumetric representation for geometry and a regularized basis-BRDF representation for reflectance. The hybrid geometric representation enables fast rendering through point-based splatting while retaining the geometric details and stability inherent to SDF-based representations. The regularized basis-BRDF mitigates the ill-posedness of inverse rendering stemming from limited light-view angular samples. We also propose an efficient shadow detection method using point-based shadow map rendering. Our extensive evaluations demonstrate that DPIR outperforms prior works in terms of reconstruction accuracy, computational efficiency, and memory footprint. Furthermore, our explicit point-based representation and rendering enables intuitive geometry and reflectance editing.
