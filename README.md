@@ -1,11 +1,10 @@
-# DPIR
-**Differentiable Point-based Inverse Rendering**
+# Differentiable Point-based Inverse Rendering
 
-[Project](https://hg-chung.github.io/DPIR/) | [Paper](https://arxiv.org/abs/2312.02480)
+## [Project](https://hg-chung.github.io/DPIR/) | [Paper](https://arxiv.org/abs/2312.02480)
 
 Hoon-Gyu Chung, Seokjun Choi, Seung-Hwan Baek
 
-CVPR, 2024
+#### CVPR, 2024
 
 ## Abstract
 We present differentiable point-based inverse rendering, DPIR, an analysis-by-synthesis method that processes images captured under diverse illuminations to estimate shape and spatially-varying BRDF. To this end, we adopt point-based rendering, eliminating the need for multiple samplings per ray, typical of volumetric rendering, thus significantly enhancing the speed of inverse rendering. To realize this idea, we devise a hybrid point-volumetric representation for geometry and a regularized basis-BRDF representation for reflectance. The hybrid geometric representation enables fast rendering through point-based splatting while retaining the geometric details and stability inherent to SDF-based representations. The regularized basis-BRDF mitigates the ill-posedness of inverse rendering stemming from limited light-view angular samples. We also propose an efficient shadow detection method using point-based shadow map rendering. Our extensive evaluations demonstrate that DPIR outperforms prior works in terms of reconstruction accuracy, computational efficiency, and memory footprint. Furthermore, our explicit point-based representation and rendering enables intuitive geometry and reflectance editing.
@@ -28,7 +27,7 @@ conda install pytorch3d -c pytorch3d
 ```
 
 ## Dataset
-We utilized multi-view multi-light image dataset([DiLiGenT-MV Dataset](https://sites.google.com/site/photometricstereodata/mv?authuser=0)) and photometric image dataset.
+**We utilized multi-view multi-light image dataset([DiLiGenT-MV Dataset](https://sites.google.com/site/photometricstereodata/mv?authuser=0)) and photometric image dataset.**
 
 Multi-view multi-light image dataset was preprocessed following [PS-NeRF](https://github.com/ywq/psnerf), which contains 5 objects.
 
@@ -39,13 +38,13 @@ You can download dataset from [Google Drive](https://drive.google.com/drive/fold
 ## Train and Evaluation
 You can train multi-view multi-light dataset(DiLiGenT-MV Dataset) or photometric dataset.
 
-If you want to train and evaluate DiLiGenT-MV dataset,
+If you want to train and evaluate **DiLiGenT-MV dataset**,
 ```bash
 cd code_diligent
 python main.py --conf confs/buddha.conf --datadir DiLiGenT-MV --dataname buddha --basedir output
 python evaluation.py --conf confs/buddha.conf --datadir DiLiGenT-MV --dataname buddha --basedir output
 ```
-If you want to train and evaluate photometric dataset,
+If you want to train and evaluate **photometric dataset**,
 ```bash
 cd code_photometric
 python main.py --conf confs/maneki.conf --datadir Photometric --dataname maneki --basedir output
