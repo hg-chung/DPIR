@@ -132,7 +132,7 @@ body {
   margin: 0;
 }
 .results-carousel .item.active {
-  display: block; /* 활성 아이템만 표시 */
+  display: block; 
 }
 
 
