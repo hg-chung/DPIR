@@ -66,11 +66,11 @@ python evaluation.py --conf confs/maneki.conf --datadir Photometric --dataname m
 ## Citation
 If you find this work useful in your research, please consider citing: 
 ```
-@article{chung2023differentiable,
+@inproceedings{chung2023differentiable,
   title={Differentiable Point-based Inverse Rendering},
   author={Chung, Hoon-Gyu and Choi, Seokjun and Baek, Seung-Hwan},
-  journal={arXiv preprint arXiv:2312.02480},
-  year={2023}
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2024}
 }
 ```
 ## Acknowledgement
