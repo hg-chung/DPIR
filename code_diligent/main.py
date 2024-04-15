@@ -1,5 +1,5 @@
 import os
-os.environ["CUDA_VISIBLE_DEVICES"]= "3"
+#os.environ["CUDA_VISIBLE_DEVICES"]= "3"
 import time
 import torch
 import matplotlib.pyplot as plt
