@@ -1,4 +1,4 @@
-# [CVPR 2024] Differentiable Point-based Inverse Rendering
+Differentiable Point-based Inverse Rendering
 
 ### [Project](https://hg-chung.github.io/DPIR/) | [Paper](https://arxiv.org/abs/2312.02480)
 
