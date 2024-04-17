@@ -24,7 +24,7 @@ from pytorch3d.renderer import (
 )
 
 
-class Trainder(object):
+class Trainer(object):
     def __init__(self, args):
         self.args = args
         self.dataname = args.dataname
@@ -154,7 +154,7 @@ class Trainder(object):
                  self.weightpath,'model_{}.pth'.format(self.dataname)))
 
 def solve(args):
-    trainer = Trainder(args)
+    trainer = Trainer(args)
     trainer.train()
     for i in range(args.refine_n):
         trainer.model.remove_out()
