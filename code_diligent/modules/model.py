@@ -4,6 +4,7 @@ import numpy as np
 from pytorch3d.ops import knn_points
 from pytorch3d.structures import Pointclouds
 from pytorch3d.renderer import (
+    look_at_view_transform,
     PerspectiveCameras,
     OrthographicCameras,
     PointsRasterizationSettings,
@@ -18,8 +19,7 @@ from modules.reflectance_network import DiffuseNetwork, CoeffNetwork
 from modules.specular_network import SpecularNetwork
 from modules.DirectionsToRusink import DirectionsToRusink
 
-from modules.utils import device, load_mem_data, load_test_data, \
-    get_rays, remove_outlier,pose_shadow
+from modules.utils import device, load_mem_data,remove_outlier
 
 
 class CoreModel(torch.nn.Module):
