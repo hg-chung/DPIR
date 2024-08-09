@@ -153,17 +153,13 @@ class CoreModel(torch.nn.Module):
     
     def forward(self, id, eval =False):     
         self._output={}
-        light_pose = pose_shadow(self.poses[id].detach().cpu(), self.light_dir[id].reshape(3).detach().cpu())
-        light_R, light_T1 = light_pose[:3,:3], light_pose[:3,3]
-        light_T2 = -(light_T1@light_R)
-        
+        light_R,light_T = look_at_view_transform(eye = 5* self.light_dir[id], up=((0, 1, 0),), at=((0, 0, 0),),device=device)
         cameras = PerspectiveCameras(focal_length=((float(self.K[0][0]/self.H*2),float(self.K[1][1]/self.W*2)),),
                                     principal_point = (((self.H/2-float(self.K[0][2]))/self.H*2, -(self.W/2-float(self.K[1][2]))/self.W*2),),# stores a batch of parameters to generate a batch of transformation matrices for perspective camera
                                     device=device, R=-self.R[id:id + 1], T=-self.T2[id:id + 1])
         
         camera_shadow = OrthographicCameras(focal_length=((float(100/self.H*3),float(100/self.W*3)),),
-                                    #principal_point = (((self.H/2-float(self.K[0][2]))/self.H*2, -(self.W/2-float(self.K[1][2]))/self.W*2),),# stores a batch of parameters to generate a batch of transformation matrices for perspective camera
-                                    device=device, R=-light_R.reshape(1,3,3), T=-light_T2.reshape(1,3))
+                                    device=device, R=light_R, T=light_T)
         normals, feature_vectors = self.compute_normals_and_feature_vectors()
         cam_loc = torch.tensor(self.T1[id:id+1])
         view_dir = cam_loc - self.vertsparam.detach()
