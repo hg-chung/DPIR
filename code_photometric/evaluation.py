@@ -77,8 +77,7 @@ class Evaluater(object):
             mask[mask>0.5] = 1
             mask[mask<=0.5] = 0
             mask2 = mask *pred_mask
-            normal_img = normal_img * pred_mask
-            mae = mae_error(normal_img*mask2,self.gt_normals[id]*mask,torch.tensor(mask2).cpu())
+            mae = mae_error(normal_img*mask2,self.gt_normals[id]*mask2,torch.tensor(mask2).cpu())
             mae_all.append(mae)
             psnr_loss = self.loss_fn(pred, self.imagesgt_train[id])
             psnr_all.append(mse2psnr(psnr_loss)) 
