@@ -41,7 +41,6 @@ class Evaluater(object):
         self.weightpath = safe_path(os.path.join(self.imgout_path, 'weight'))
         self.evalout_path = safe_path(os.path.join(self.evalimg_path,
                         'v2_{:.3f}_{:.3f}'.format(self.data_r, self.splatting_r)))
-        self.basis = safe_path(os.path.join(self.evalimg_path,'basis'))
         self.loss_fn = torch.nn.MSELoss()
         self.lpips = LPIPS()
         self.lrexp, self.lr_s = args.lrexp, args.lr_s
